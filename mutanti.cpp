@@ -2,13 +2,19 @@
 using namespace std;
 
 int main(){
-	int mutants, p, n, days, breeding;
+	int mutants, n, days;
+	double p, breeding;
 	days = 0;
 	
+	cout << "The city was attacked by mutants" << endl;
+	cout << "Enter the number of mutants: ";
 	cin >> mutants;
 	cout << "The city was attacked by " << mutants << " mutants!!!" << endl;
+	cout << "They multiply by few percent" << endl;
+	cout << "Enter the percentage by which mutants breed: ";
 	cin >> p;
-	cout << "They multiply by " << p << "% every night" << endl;
+	cout << "If utilities will kill several mutants" << endl;
+	cout << "Enter the number of mutants that are killed every day: ";
 	cin >> n;
 	cout <<"If utilities kill " << n << " mutants every day then ";
 	
@@ -17,7 +23,7 @@ int main(){
 		mutants = mutants + breeding - n;
 		days = i;
 		
-		if (breeding > n){
+		if (breeding >= n){
 			cout << "YOU DIED" << endl;
 			break;
 		}
