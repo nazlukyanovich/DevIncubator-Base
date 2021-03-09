@@ -20,16 +20,22 @@ int main(){
 	
 	for(int i = 0; mutants >= 0; i++){
 		breeding = mutants * p / 100;
-		mutants = mutants + breeding - n;
-		days = i;
 		
-		if (breeding >= n){
+		if (breeding > n){
 			cout << "YOU DIED" << endl;
 			break;
+		} else if (breeding == n){
+			cout << "Humanity wil never win" << endl;
+			break;
+		} else{
+			mutants += breeding - n;
+			days = i;
 		}
 	}
 	
-	cout << "Humanity will win through: " << days << " days";
-		
+	if (breeding < n){
+		cout << "Humanity will win through: " << days << " days";
+	}
+	
 	return 0;
 }
