@@ -7,13 +7,17 @@ int main(){
 	int a, b;
 	
 	srand(time(0));
-	a = rand() % 1000;
+	a = rand() % 1000 + 1 ;
 	
 	cout << "I thought a number from 1 to 1000!! Gues which?" << endl;
 	
+	
 	do {
 		cin >> b;
-		if (b > a) {
+		
+		if (b < 0){
+			cout << "You entered negavive number!" << endl;
+		} else if (b > a) {
 			cout << "Too much! Try less than it" << endl;
 		} else if (b < a) {
 			cout << "Too few! Try greater than it" << endl;

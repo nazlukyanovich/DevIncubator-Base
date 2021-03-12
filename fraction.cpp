@@ -3,8 +3,7 @@ using namespace std;
 
 int main()
 {   
-    double a;
-    int result;
+    double a, result;
 	
 	do {
     	cout << "Please, enter fractional number: ";
