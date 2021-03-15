@@ -9,7 +9,12 @@ int main(){
 	cout << "Input n" << endl;
 	cin >> n;
 	
-	cout << n << " member of Fibonacci ssequence is " << getFibonacci(n) << endl;
+	if(n < 0){
+		cout << "Error! n = 0" << endl;
+		return 1;
+	}
+	
+	cout << n << " member of Fibonacci sequence is " << getFibonacci(n) << endl;
 	cout << "Sequence numbers that come before it: " << endl;
 	
 	for(int i = 0; i <= n; i++){

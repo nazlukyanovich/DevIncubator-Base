@@ -33,6 +33,7 @@ int main(){
 }
 
 int getBin(int num){
+	
 	int bin, k = 1;
 	
 	while(num){
@@ -43,4 +44,3 @@ int getBin(int num){
 
 	return bin;
 }
-

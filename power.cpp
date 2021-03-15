@@ -24,11 +24,16 @@ void power(double x, double n){
 		x = 1;
 		cout << x;
 	} else if (n < 0){
-		for(int i = -1; i > n; i--){
-			x = x * xFactor;
+		if(x == 0){
+			x = 0;
+			cout << x;
+		} else{
+			for(int i = -1; i > n; i--){
+				x = x * xFactor;
+			}
+			x = 1 / x;
+			cout << x;
 		}
-		x = 1 / x;
-		cout << x;
 	} else{
 		for(int i = 1; i < n; i++){
 			x = x * xFactor;
